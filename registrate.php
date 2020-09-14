@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/registrate.css">
-	<title>Registrate</title>
+	<title>Registrate | Transporte Bonfigli SRL</title>
 </head>
 <body>
 	<div class="contenedor">
