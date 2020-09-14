@@ -16,11 +16,11 @@ if (isset($_SESSION['usuario'])) {
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/menu.css">
-	<title>Contenido</title>
+	<title>Menu</title>
 </head>
 <body>
 	<div class="contenedor">
-		<h1 class="titulo">Contenido del sitio</h1>
+		<h1 class="titulo">Menu del sitio</h1>
 		<a href="cerrar.php">Cerrar Sesion</a>
 		<hr class="border">
 
