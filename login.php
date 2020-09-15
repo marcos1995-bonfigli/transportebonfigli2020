@@ -47,33 +47,49 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<title>Login | Transporte Bonfigli SRL</title>
 </head>
 <body>
-	<div class="contenedor">
-		<h1 class="titulo">Iniciar Sesión</h1>
-		<hr class="border">
+	<section id="pantalla-dividida">
+		<div class="izquierda">
+			<img src="assets/images/logo.png" id="logo">
+			<p class="texto-registrate">
+				¿Aún no tienes cuenta? <a href="registrate.php">Registrate</a>
+			</p>
+		</div>
 
-		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="formulario" name="login">
-			<div class="form-group">
-				<i class="icono izquierda fa fa-user"></i><input type="text" name="usuario" class="usuario" placeholder="Usuario">
+		<div class="derecha">
+			<div class="contenedor">
+				<h1 class="titulo">Iniciar Sesión</h1>
+				<hr class="border">
+
+				<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="formulario" name="login">
+					<div class="form-group">
+						<i class="icono izquierda fa fa-user"></i><input type="text" name="usuario" class="usuario" placeholder="Usuario">
+					</div>
+
+					<div class="form-group">
+						<i class="icono izquierda fa fa-lock"></i><input type="password" name="password" class="password_btn" placeholder="Contraseña">
+						<i class="submit-btn fa fa-arrow-right" onclick="login.submit()"></i>
+					</div>
+
+					<?php if(!empty($errores)): ?>
+						<div class="error">
+							<ul>
+								<?php echo $errores;?>
+							</ul>
+						</div>
+					<?php endif; ?>
+				</form>
+
+				<p class="recupero">
+					<a href="#">¿Has olvidado tu contraseña?</a>
+				</p>
 			</div>
 
-			<div class="form-group">
-				<i class="icono izquierda fa fa-lock"></i><input type="password" name="password" class="password_btn" placeholder="Contraseña">
-				<i class="submit-btn fa fa-arrow-right" onclick="login.submit()"></i>
-			</div>
-
-			<?php if(!empty($errores)): ?>
-				<div class="error">
-					<ul>
-						<?php echo $errores;?>
-					</ul>
-				</div>
-			<?php endif; ?>
-		</form>
-
-		<p class="texto-registrate">
-			¿ Aun no tienes cuenta ?
-			<a href="registrate.php">Registrate</a>
-		</p>
-	</div>
+			<p class="texto-contacto">
+				2020 &copy;<a href="http://www.transportebonfigli.com.ar/index.html" target="_blank">Transporte Bonfigli SRL</a>								
+				<a href="http://www.transportebonfigli.com.ar/servicios.html" target="_blank">| Servicios</a>
+				<a href="http://www.transportebonfigli.com.ar/contacto.html" target="_blank">| Contacto</a>	
+			</p>
+		</div>
+	</section>
 </body>
 </html>
