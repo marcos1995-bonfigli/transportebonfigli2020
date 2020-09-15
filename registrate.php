@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		</form>
 
 		<p class="texto-registrate">
-			¿ Ya tienes cuenta ?
+			¿Ya tienes cuenta?
 			<a href="login.php">Iniciar Sesión</a>
 		</p>
 	</div>
