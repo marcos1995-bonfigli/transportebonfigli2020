@@ -13,6 +13,27 @@ body{
 	color: #fff;
 }
 
+.izquierda{
+	background: url(../images/login.png);
+	background-size: cover;
+	background-position: center;
+	width: 60%;
+	height: 100vh;
+}
+
+#logo{
+	margin-top: -30px;
+	margin-left: -90px;
+}
+
+.derecha{
+	width: 50%;
+}
+
+#pantalla-dividida{
+	display: flex;
+}
+
 a{
 	text-decoration: none;
 	color: #B8711B;
@@ -26,6 +47,9 @@ a:hover{
 	max-width: 500px;
 	width: 90%;
 	margin: auto;
+	float: right;
+	margin-top: 140px;
+	margin-right: 90px;
 }
 
 .titulo{
@@ -132,7 +156,24 @@ a:hover{
 	background: #ffa502;
 }
 
+.recupero{
+	text-align: center;
+}
+
+.texto-contacto{
+	padding: 10px;
+	font-size: 12px;
+	float: right;
+	margin-top: 180px;
+}
+
+.texto-contacto a{
+	padding: 3px;
+}
+
 .texto-registrate{
+	margin-top: 550px;
+	margin-left: -620px;
 	text-align: center;
 }
 
@@ -141,12 +182,4 @@ a:hover{
 	font-size: 18px;
 }
 
-.contenido article{
-	padding: 30px;
-	background: #fff;
-}
 
-.contenido article p{
-	margin-bottom: 10px;
-	color: #000;
-}
