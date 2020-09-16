@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 	<section id="pantalla-dividida">
 		<div class="izquierda">
-			<img src="assets/images/logo.png" id="logo">
+			<a href="http://www.transportebonfigli.com.ar/index.html" target="_blank"><img src="assets/images/logo.png" id="logo" title="Transporte Bonfigili SRL"></a>
 			<p class="texto-registrate">
 				¿Aún no tienes cuenta? <a href="registrate.php">Registrate</a>
 			</p>
