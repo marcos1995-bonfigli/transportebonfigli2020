@@ -1,0 +1,24 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.contenedorMenu{
+
+    position: fixed;
+    width: 200px;
+    height: 300px;
+    background-color: grey;
+}
+
+#contenedorMenu ul li {
+    color: rgba(230, 230, 230, 0);  
+    font-family: arial;
+    text-align: center;
+    border-bottom: 1px solid rgba(100,100,100, .3 )
+
+}
