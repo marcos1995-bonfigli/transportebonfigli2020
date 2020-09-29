@@ -116,10 +116,9 @@ a:hover{
 	max-height: 48px;
 	font-size: 18px;
 	line-height: 18px;
-	background: #679863;
+	background: #B8711B;
 	display: inline-block;
 	color: #fff;
-	background: #769766;
 	cursor: pointer;
 
 	-webkit-border-radius: 0 3px 3px 0;
@@ -127,6 +126,10 @@ a:hover{
 	-ms-border-radius: 0 3px 3px 0;
 	-o-border-radius: 0 3px 3px 0;
 	border-radius: 0 3px 3px 0;
+}
+
+.formulario .submit-btn:hover{
+	background: #ffa502;
 }
 
 .texto-registrate{
