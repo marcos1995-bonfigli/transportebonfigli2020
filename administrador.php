@@ -16,7 +16,7 @@
        
     <ul >
         <li>
-        <a href="#">Menú Principaaaal</a>
+        <a href="#">Menú Principal</a>
         </li>
         <li>
         <a href="#">Opcion 2</a>
