@@ -7,12 +7,12 @@ if (isset($_SESSION['usuario'])) {
 $errores = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$usuario = filter_var(strtolower($_POST['usuario']), FILTER_SANITIZE_STRING);
+	$usuario = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING);
 	$password = $_POST['password'];
 	$password = hash('sha512', $password);
 
 	try{
-		$conexion = new PDO('mysql:host=localhost;dbname=login_practica', 'root', '');
+		$conexion = new PDO('mysql:host=sql395.main-hosting.eu;dbname=u601553382_BaseTransporte', 'u601553382_bonfigli', 'Transporte2021');
 	}catch (PDOException $e){
 		echo "Error:" . $e->getMessage();
 	}
