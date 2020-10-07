@@ -1,10 +1,9 @@
-/*
-Colores:
 
-Gris: #ecf0f1;
-Naranja: #ffaf40;
+/* COLOR GRIS #ecf0f1
+
+#ffaf40 NARANJA
+    
 */
-
 *{
 	margin: 0;
 	padding: 0;
@@ -124,6 +123,8 @@ header img {
    
 } 
 
+
+
  li{
     border-bottom: 1px solid rgba(100,100,100,.3);
     padding: 25px 10px;
@@ -135,9 +136,13 @@ header img {
     
    }
 
- .contenedorMenu> li > a:active:before {
-    background-color: blue;
+ul li.active{
+
+    background: #ffaf40;
+
 }
+
+
 
 
 
