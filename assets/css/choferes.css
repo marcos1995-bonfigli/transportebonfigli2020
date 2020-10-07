@@ -1,0 +1,61 @@
+.contenedorTitulo{
+    width: 1378px;
+    height: 42px;
+    float: right;
+    margin-top: -723px;
+    background: #ffffff;
+}
+
+.contenedorTitulo h6{
+    font-size: 20px;
+    color: #B8711B;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.abm{
+    width: 1378px;
+    height: 26px;
+    float: right;
+    margin-top: -679px;
+    background: #ecf0f1;
+}
+
+.abm a{
+    margin: auto;
+    margin-left: 15px;
+}
+
+.abm .alta,
+.abm .eliminar{
+    font-size: 18px;
+    color: #B8711B;
+}
+
+.abm .alta:hover,
+.abm .eliminar:hover{
+    text-decoration: none;
+    background: #B8711B;
+    color: #ffffff;
+}
+
+.table{
+    width: 89% !important;
+    margin-top: -650px;
+    margin-left: 152px;
+}
+
+.table td{
+    background: #ffffff !important;
+}
+
+.table i{
+    color: #B8711B;
+}
+
+.btn-dark{
+    background: #ecf0f1 !important;
+    border-color: #ecf0f1 !important;
+}
+
+
