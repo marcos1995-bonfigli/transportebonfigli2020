@@ -18,7 +18,6 @@ body{
 	background-size: cover;
 	background-position: center;
 	width: 60%;
-	height: 100vh;
 }
 
 #logo{
@@ -41,6 +40,7 @@ a{
 
 a:hover{
 	text-decoration: underline;
+	color: #B8711B;
 }
 
 .contenedor{
@@ -121,6 +121,12 @@ a:hover{
 	border-radius: 0 3px 3px 0;
 }
 
+.usuario:focus,
+.password_btn:focus{ 
+	background: #ffeaa7;
+	outline: none;
+}
+
 .formulario .password_btn{
 	width: calc(100% - 105px);
 }
@@ -164,7 +170,8 @@ a:hover{
 	padding: 10px;
 	font-size: 12px;
 	float: right;
-	margin-top: 180px;
+	margin-top: 138px;
+	margin-right: 10px;
 }
 
 .texto-contacto a{
@@ -172,7 +179,7 @@ a:hover{
 }
 
 .texto-registrate{
-	margin-top: 550px;
+	margin-top: 538px;
 	margin-left: -620px;
 	text-align: center;
 }
