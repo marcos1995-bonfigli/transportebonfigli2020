@@ -20,6 +20,7 @@ a{
 
 a:hover{
 	text-decoration: underline;
+	color: #B8711B !important;
 }
 
 .contenedor{
@@ -95,6 +96,13 @@ a:hover{
 	-ms-border-radius: 0 3px 3px 0;
 	-o-border-radius: 0 3px 3px 0;
 	border-radius: 0 3px 3px 0;
+}
+
+.usuario:focus,
+.password:focus,
+.password_btn:focus{ 
+	background: #ffeaa7;
+	outline: none;
 }
 
 .formulario .password_btn{
