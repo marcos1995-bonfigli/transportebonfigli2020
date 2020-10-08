@@ -29,9 +29,9 @@
 					<i class="far fa-question-circle" style="font-size:20px; color:#B8711B"></i>
 					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['usuario']; ?> <i class="far fa-user" style="font-size:20px; color:#B8711B"></i></button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a class="dropdown-item" href="#">Mis Datos</a>
-						<a class="dropdown-item" href="#">Contraseña</a>
-						<a class="dropdown-item" href="logout.php">Cerrar Sesion</a>
+						<a class="dropdown-item" href="#"><i class="fas fa-user-cog"></i> Mis Datos</a>
+						<a class="dropdown-item" href="#"><i class="fas fa-lock"></i> Contraseña</a>
+						<a class="dropdown-item" href="logout.php"><i class="fas fa-window-close"></i> Cerrar Sesion</a>
 					</div>
 				</div>
 			</div>
