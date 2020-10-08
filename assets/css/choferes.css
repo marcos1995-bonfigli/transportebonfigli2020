@@ -45,8 +45,13 @@
     margin-left: 152px;
 }
 
-.table td{
-    background: #ffffff !important;
+.table tbody tr{
+    background-color: #ffffff !important;
+}
+
+.table tbody tr:hover{
+    background-color: #fafbfc !important;
+    color: #B8711B !important;
 }
 
 .table i{
