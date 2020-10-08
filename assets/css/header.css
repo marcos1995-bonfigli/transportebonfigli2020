@@ -46,10 +46,6 @@ img{
 	color: #B8711B;
 }
 
-.right a:hover{
-	color: #B8711B;
-}
-
 .btn-secondary{
     color: #353b48 !important;
     background: #ecf0f1 !important;
@@ -62,6 +58,14 @@ img{
 
 .fa-question-circle{
 	margin-right: 20px;
+}
+
+.dropdown-menu a{
+	color: #353b48;
+}
+
+.dropdown-menu i{
+	color: #B8711B;
 }
 
 .dropdown-item:focus{
