@@ -7,10 +7,39 @@
 }
 
 .contenedorTitulo h6{
-    font-size: 20px;
+    font-size: 26px;
     color: #B8711B;
-    margin-top: 10px;
+    margin-top: 6px;
     margin-left: 25px;
+}
+
+.contenedorTitulo .dropdown{
+    float: right;
+    margin-top: -39px;
+    margin-right: 26px;
+}
+
+.contenedorTitulo .dropdown li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 80px;
+}
+
+.contenedorTitulo a{
+    color: black;
+}
+
+.contenedorTitulo a:hover{
+    color: #B8711B;
+}
+
+.contenedorTitulo .btn-secondary{
+    background: none !important;
+    margin-top: -4px;
+}
+
+.contenedorTitulo .dropdown-item:hover{
+    text-decoration: underline !important;
 }
 
 .abm{
