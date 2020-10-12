@@ -14,6 +14,17 @@
 
     <div class="contenedorTitulo">
         <h6>Gestor de Choferes</h6>
+        <div class="dropdown">
+            <li><a href="#">Staff</a></li>
+            <li><a href="#">Vencimientos</a></li>
+            <li><a href="#">Vtos. Agrupados Pendientes</a></li>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Configuraciones</button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"></a>
+                <a class="dropdown-item" href="#"></a>
+                <a class="dropdown-item" href="#"></a>
+            </div>
+        </div>
     </div>
 
     <div class="abm">   
