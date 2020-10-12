@@ -4,6 +4,7 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <link rel="stylesheet" href="assets/css/choferes.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="assets/js/menu.js"></script>
 <title>Gestor de Choferes | Transporte Bonfigli SRL</title>
 
@@ -13,12 +14,77 @@
 
     <div class="contenedorTitulo">
         <h6>Gestor de Choferes</h6>
-	</div>
-
-    <div class="abm">     
-        <a href='chofer_edit.php?tipo=A' class='alta'><i class='fa fa-user'></i> Alta Chofer</a>
-        <a href='delete_chofer.php' class='eliminar'><i class='fa fa-ban'></i> Eliminar</a>
     </div>
+
+    <div class="abm">   
+        <?php 
+            $barrabotones = "";
+
+            $barrabotones = $barrabotones."<a href='#' class='alta' data-toggle='modal' data-target='#modalAltaChofer' data-link='chofer_edit.php?tipo=A'><i class='fa fa-user'></i> ".gettext("Alta Chofer")."</a>";
+            
+            $barrabotones = $barrabotones."<a href='#' class='eliminar' data-toggle='modal' data-target='#modalEliminarChofer' data-link='delete_chofer.php'><i class='fa fa-ban'></i> ".gettext("Eliminar")."</a>";
+
+            echo $barrabotones;
+        ?>
+    </div>
+
+    <div class="modal fade" id="modalAltaChofer" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Alta Chofer |</h5>
+                    <i class="fas fa-times-circle" data-dismiss="modal"></i>
+                </div>
+                <div class="modal-body" style="height: 400px;">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                        </div>
+                        <input type="text" class="textos" name="dni" id="#dni" placeholder="DNI">
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="far fa-user"></i></span>
+                        </div>
+                        <input type="text" class="textos" name="nombres" id="#nombres" placeholder="Nombres">
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="far fa-user"></i></span>
+                        </div>
+                        <input type="text" class="textos" name="apellidos" id="#apellidos" placeholder="Apellidos">
+                    </div>
+
+                   <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                        </div>
+                        <input type="text" class="textos" name="fechaNacimiento" id="#fechaNacimiento" placeholder="Fecha de Nacimiento">
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-at"></i></span>
+                        </div>
+                        <input type="email" class="textos" name="email" id="#email" placeholder="Email">
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
+                        </div>
+                        <input type="tel" class="textos" name="telefono" id="#telefono" placeholder="Teléfono">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href='#' class="guardar"><i class='fa fa-check'></i> <?php echo gettext("Guardar");?> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <div class="contenedorTabla">
     <table class="table">
         <thead>
@@ -94,7 +160,7 @@
     </table>
 </div>
 
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
