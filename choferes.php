@@ -46,6 +46,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Alta Chofer |</h5>
                     <i class="fas fa-times-circle" data-dismiss="modal"></i>
                 </div>
+                
                 <div class="modal-body" style="height: 400px;">
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -72,7 +73,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                         </div>
-                        <input type="text" class="textos" name="fechaNacimiento" id="#fechaNacimiento" placeholder="Fecha de Nacimiento">
+                        <input type="text" class="textos" name="fechaNacimiento" id="#fechaNacimiento" readonly placeholder="Fecha de Nacimiento">
                     </div>
 
                     <div class="input-group">
@@ -89,8 +90,37 @@
                         <input type="tel" class="textos" name="telefono" id="#telefono" placeholder="Teléfono">
                     </div>
                 </div>
+
                 <div class="modal-footer">
                     <a href='#' class="guardar"><i class='fa fa-check'></i> <?php echo gettext("Guardar");?> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalEliminarChofer" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eliminar |</h5>
+                    <i class="fas fa-times-circle" data-dismiss="modal"></i>
+                </div>
+                
+                <div class="modal-body" style="height: 300px;">      
+                    <div class="alert alert-custom alert-warning" role="alert" style="color: #B8711B;">
+                        <div class="alert-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="alert-text">CUIDADO: Con este cambio se eliminarán los choferes seleccionados.</div>
+                    </div>
+
+                    <div>
+                        <p style="text-align: center;">¿Realmente desea eliminar los datos?</p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <a href='#' class="guardar"><i class="fas fa-trash-alt"></i> <?php echo gettext("Eliminar");?> </a>
                 </div>
             </div>
         </div>
@@ -120,7 +150,7 @@
                 <td>tomigcorpo@gmail.com</td>
                 <td>3512375890</td>
                 <td>
-                    <a href="chofer_edit.php?tipo=E">
+                    <a href="#" data-toggle="modal" data-target="#modalAltaChofer" data-link="chofer_edit.php?tipo=E">
                         <button type="button" class="btn btn-dark"><i class="fas fa-user-edit"></i></button>
                     </a>
                 </td>
@@ -134,7 +164,7 @@
                 <td>marcosbonfigli95@gmail.com</td>
                 <td>3514563782</td>
                 <td>
-                    <a href="chofer_edit.php?tipo=E">
+                    <a href="#" data-toggle="modal" data-target="#modalAltaChofer" data-link="chofer_edit.php?tipo=E">
                         <button type="button" class="btn btn-dark"><i class="fas fa-user-edit"></i></button>
                     </a>
                 </td>
@@ -148,7 +178,7 @@
                 <td>lucasgfara@gmail.com</td>
                 <td>3514821432</td>
                 <td>
-                    <a href="chofer_edit.php?tipo=E">
+                    <a href="#" data-toggle="modal" data-target="#modalAltaChofer" data-link="chofer_edit.php?tipo=E">
                         <button type="button" class="btn btn-dark"><i class="fas fa-user-edit"></i></button>
                     </a>
                 </td>
@@ -162,7 +192,7 @@
                 <td>nicocoro15@gmail.com</td>
                 <td>3512543569</td>
                 <td>
-                    <a href="chofer_edit.php?tipo=E">
+                    <a href="#" data-toggle="modal" data-target="#modalAltaChofer" data-link="chofer_edit.php?tipo=E">
                         <button type="button" class="btn btn-dark"><i class="fas fa-user-edit"></i></button>
                     </a>
                 </td>
