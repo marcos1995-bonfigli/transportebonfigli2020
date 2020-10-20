@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <link rel="stylesheet" href="assets/css/choferes.css">
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="assets/js/menu.js"></script>
 <title>Gestor de Choferes | Transporte Bonfigli SRL</title>
 
 <?php require 'header.php'; ?>
@@ -37,6 +36,18 @@
 
             echo $barrabotones;
         ?>
+
+        <a href='#' id="filtros-ver" onclick="document.getElementById('filtros').style.display='block'; document.getElementById('filtros-ver').style.display='none'; document.getElementById('filtros-ocultar').style.display='inline';"><i class='fa fa-search-plus'></i></a>
+
+        <a href='#' id="filtros-ocultar" onclick="document.getElementById('filtros').style.display ='none'; document.getElementById('filtros-ver').style.display='inline'; document.getElementById('filtros-ocultar').style.display='none';" style="display: none;"><i class='fa fa-search-minus'></i></a>
+
+        <div id="filtros">
+            <label><input type="text" id="filtros_nombres" name="filtros_nombres" placeholder="Nombres" /></label>  
+            <label><input type="text" id="filtros_apellidos" name="filtros_apellidos" placeholder="Apellidos" /></label>   
+            <button type="button" style="font-size: 11px;" class="btn btn-dark" id="filtros_buscar" value="Buscar"><i class="flaticon-search"></i><?php echo gettext("BUSCAR");?></button>
+            <button type="button" style="font-size: 11px;" class="btn btn-dark" id="filtros_limpiar" value="Limpiar"><i class="flaticon-circle"></i><?php echo gettext("LIMPIAR");?></button>
+        </div>
+
     </div>
 
     <div class="modal fade" id="modalAltaChofer" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
@@ -108,10 +119,7 @@
                 
                 <div class="modal-body" style="height: 300px;">      
                     <div class="alert alert-custom alert-warning" role="alert" style="color: #B8711B;">
-                        <div class="alert-icon">
-                            <i class="fas fa-exclamation-triangle"></i>
-                        </div>
-                        <div class="alert-text">CUIDADO: Con este cambio se eliminarán los choferes seleccionados.</div>
+                        <div class="alert-text"><i class="fas fa-exclamation-triangle"></i> CUIDADO: Con este cambio se eliminarán los choferes seleccionados.</div>
                     </div>
 
                     <div>
