@@ -6,6 +6,49 @@
     background: #ffffff;
 }
 
+#filtros{
+    display:none;
+    margin-top: -35px;
+    margin-left: 266px;
+    padding: 8px;
+}
+
+#filtros-ver{
+    font-size: 18px;
+    color: #B8711B !important;
+    margin-top: -4px;
+}
+
+#filtros-ocultar{
+    font-size: 18px;
+    color: #B8711B !important;
+    margin-top: -4px;
+}
+
+#filtros_nombres:focus,
+#filtros_apellidos:focus{ 
+    background: #ffeaa7;
+    outline: none;
+}
+
+#filtros_buscar{
+    background-color: #B8711B !important;
+}
+
+#filtros_limpiar{
+    background-color: #B8711B !important;
+}
+
+#filtros_buscar:hover{
+    background-color: #ecf0f1 !important;
+    color: #B8711B !important;
+}
+
+#filtros_limpiar:hover{
+    background-color: #ecf0f1 !important;
+    color: #B8711B !important;
+}
+
 .contenedorTitulo h6{
     font-size: 26px;
     color: #B8711B;
@@ -136,6 +179,8 @@
     color: white;
     text-decoration: none;
 }
+
+
 
 
 
