@@ -106,9 +106,7 @@
 
 .abm .alta:hover,
 .abm .eliminar:hover{
-    text-decoration: none;
-    background: #B8711B;
-    color: #ffffff;
+    text-decoration: underline;
 }
 
 .table{
@@ -175,9 +173,7 @@
 }
 
 .modal-footer .guardar:hover{
-    background: #B8711B !important;
-    color: white;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 
