@@ -7,36 +7,25 @@
 }
 
 #filtros{
-    display:none;
     margin-top: -35px;
-    margin-left: 266px;
+    margin-left: 230px;
     padding: 8px;
 }
 
-#filtros-ver{
-    font-size: 18px;
-    color: #B8711B !important;
-    margin-top: -4px;
-}
-
-#filtros-ocultar{
-    font-size: 18px;
-    color: #B8711B !important;
-    margin-top: -4px;
-}
-
 #filtros_nombres:focus,
-#filtros_apellidos:focus{ 
+#filtros_apellido:focus{ 
     background: #ffeaa7;
     outline: none;
 }
 
 #filtros_buscar{
     background-color: #B8711B !important;
+    margin-top: -2px;
 }
 
 #filtros_limpiar{
     background-color: #B8711B !important;
+    margin-top: -2px;
 }
 
 #filtros_buscar:hover{
