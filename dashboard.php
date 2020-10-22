@@ -1,7 +1,7 @@
 <?php session_start();
 
-if (isset($_SESSION['usuario'])) {
-	'menu.php';
+if (isset($_SESSION['Usuario'])) {
+	'dashboard.php';
 }else{
 	header('Location: login.php');
 }
@@ -10,7 +10,6 @@ if (isset($_SESSION['usuario'])) {
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <link rel="stylesheet" href="assets/css/dashboard.css">
-<script type="text/javascript" src="assets/js/menu.js"></script>
 <title>Principal | Transporte Bonfigli SRL</title>
 
 <?php require 'header.php'; ?>
