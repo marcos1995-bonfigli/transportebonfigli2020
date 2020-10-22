@@ -1,33 +1,33 @@
 <?php session_start();
 
-if (isset($_SESSION['usuario'])) {
+if (isset($_SESSION['Usuario'])) {
 	header('Location: index.php');
 }
 
 $errores = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$usuario = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING);
-	$password = $_POST['password'];
-	$password = hash('sha512', $password);
+	$Usuario = filter_var(strtolower($_POST['Usuario']), FILTER_SANITIZE_STRING);
+	$Clave = $_POST['Clave'];
+	$Clave = hash('sha512', $Clave);
 
 	try{
-		$conexion = new PDO('mysql:host=sql395.main-hosting.eu;dbname=u601553382_BaseTransporte', 'u601553382_bonfigli', 'Transporte2021');
+		$conexion = new PDO('mysql:host=sql395.main-hosting.eu;dbname=u601553382_Transporte2020', 'u601553382_bonfigli', 'Transporte2020');
 	}catch (PDOException $e){
 		echo "Error:" . $e->getMessage();
 	}
 
 	$statement = $conexion->prepare('
-		SELECT * FROM usuarios WHERE usuario = :usuario AND pass = :password'
+		SELECT * FROM personas WHERE Usuario = :Usuario AND Clave = :Clave'
 	);
 	$statement->execute(array(
-		':usuario' => $usuario,
-		':password' => $password
+		':Usuario' => $Usuario,
+		':Clave' => $Clave
 	));
 
 	$resultado = $statement->fetch();
 	if ($resultado !== false) {
-		$_SESSION['usuario'] = $usuario;
+		$_SESSION['Usuario'] = $Usuario;
 		header('Location: index.php');
 	}else{
 		$errores .= '<li>Datos Incorrectos</li>';
@@ -63,11 +63,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 				<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="formulario" name="login">
 					<div class="form-group">
-						<i class="icono izquierda fa fa-user"></i><input type="text" name="usuario" class="usuario" placeholder="Usuario">
+						<i class="icono izquierda fa fa-user"></i><input type="text" name="Usuario" class="usuario" placeholder="Usuario">
 					</div>
 
 					<div class="form-group">
-						<i class="icono izquierda fa fa-lock"></i><input type="password" name="password" class="password_btn" placeholder="Contraseña">
+						<i class="icono izquierda fa fa-lock"></i><input type="password" name="Clave" class="password_btn" placeholder="Contraseña">
 						<i class="submit-btn fa fa-arrow-right" onclick="login.submit()"></i>
 					</div>
 
