@@ -37,13 +37,9 @@
             echo $barrabotones;
         ?>
 
-        <a href='#' id="filtros-ver" onclick="document.getElementById('filtros').style.display='block'; document.getElementById('filtros-ver').style.display='none'; document.getElementById('filtros-ocultar').style.display='inline';"><i class='fa fa-search-plus'></i></a>
-
-        <a href='#' id="filtros-ocultar" onclick="document.getElementById('filtros').style.display ='none'; document.getElementById('filtros-ver').style.display='inline'; document.getElementById('filtros-ocultar').style.display='none';" style="display: none;"><i class='fa fa-search-minus'></i></a>
-
         <div id="filtros">
             <label><input type="text" id="filtros_nombres" name="filtros_nombres" placeholder="Nombres" /></label>  
-            <label><input type="text" id="filtros_apellidos" name="filtros_apellidos" placeholder="Apellidos" /></label>   
+            <label><input type="text" id="filtros_apellido" name="filtros_apellidos" placeholder="Apellido" /></label>   
             <button type="button" style="font-size: 11px;" class="btn btn-dark" id="filtros_buscar" value="Buscar"><i class="flaticon-search"></i><?php echo gettext("BUSCAR");?></button>
             <button type="button" style="font-size: 11px;" class="btn btn-dark" id="filtros_limpiar" value="Limpiar"><i class="flaticon-circle"></i><?php echo gettext("LIMPIAR");?></button>
         </div>
