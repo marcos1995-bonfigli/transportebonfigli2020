@@ -1,46 +1,58 @@
 <?php session_start();
 
-if (isset($_SESSION['usuario'])) {
+if (isset($_SESSION['Usuario'])) {
 	header('Location: index.php');
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$usuario = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING);
-	$password = $_POST['password'];
-	$password2 = $_POST['password2'];
+	$Apellido = $_POST['Apellido'];
+	$Nombres = $_POST['Nombres'];
+	$TipoDocumento = $_POST['TipoDocumento'];
+	$NroDocumento = $_POST['NroDocumento'];
+	$Id_rol = $_POST['Id_rol'];
+	$Eliminado = $_POST['Eliminado'];
+	$Usuario = filter_var($_POST['Usuario'], FILTER_SANITIZE_STRING);
+	$Clave = $_POST['Clave'];
+	$Clave2 = $_POST['Clave2'];
 
 	$errores = '';
 
-	if (empty($usuario) or empty($password) or empty($password2)) {
+	if (empty($Usuario) or empty($Clave) or empty($Clave2)) {
 		$errores .= '<li>Por favor rellena todos los datos correctamente</li>';
 	} else {
 		try{
-			$conexion = new PDO('mysql:host=sql395.main-hosting.eu;dbname=u601553382_BaseTransporte', 'u601553382_bonfigli', 'Transporte2021');
+			$conexion = new PDO('mysql:host=sql395.main-hosting.eu;dbname=u601553382_Transporte2020', 'u601553382_bonfigli', 'Transporte2020');
 		} catch(PDOException $e){
 			echo "Error: " . $e->getMessage();
 		}
 		
-		$statement = $conexion->prepare('SELECT * FROM usuarios WHERE usuario = :usuario LIMIT 1');
-		$statement->execute(array(':usuario' => $usuario));
+		$statement = $conexion->prepare('SELECT * FROM personas WHERE Usuario = :Usuario LIMIT 1');
+		$statement->execute(array(':Usuario' => $Usuario));
 		$resultado = $statement->fetch();
 
 		if ($resultado != false) {
 			$errores .= '<li>El nombre de usuario ya existe</li>';
 		}
 
-		$password = hash('sha512', $password);
-		$password2 = hash('sha512', $password2);
+		$Clave = hash('sha512', $Clave);
+		$Clave2 = hash('sha512', $Clave2);
 
-		if ($password != $password2) {
+		if ($Clave != $Clave2) {
 			$errores .= '<li>Las contraseñas no son iguales</li>';
 		}	
 	}
 
 	if ($errores == '') {
-		$statement = $conexion->prepare('INSERT INTO usuarios (id, usuario, pass) VALUES (null, :usuario, :pass)');
+		$statement = $conexion->prepare('INSERT INTO personas (Id, Usuario, Clave, Apellido, Nombres, TipoDocumento, NroDocumento, Id_rol, Eliminado) VALUES (null, :Usuario, :Clave, :Apellido, :Nombres, :TipoDocumento, :NroDocumento, :Id_rol, :Eliminado)');
 		$statement->execute(array(
-			':usuario' => $usuario, 
-			':pass' => $password
+			':Usuario' => $Usuario, 
+			':Clave' => $Clave,
+			':Apellido' => $Apellido, 
+			':Nombres' => $Nombres, 
+			':TipoDocumento' => $TipoDocumento, 
+			':NroDocumento' => $NroDocumento, 
+			':Id_rol' => $Id_rol,
+			':Eliminado' => $Eliminado
 		));
 
 		header('Location: login.php');
@@ -68,15 +80,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="formulario" name="login">
 			<div class="form-group">
-				<i class="icono izquierda fa fa-user"></i><input type="text" name="usuario" class="usuario" placeholder="Usuario">
+				<i class="icono izquierda fa fa-user"></i><input type="text" name="Apellido" class="usuario" placeholder="Apellido">
 			</div>
 
 			<div class="form-group">
-				<i class="icono izquierda fa fa-lock"></i><input type="password" name="password" class="password" placeholder="Contraseña">
+				<i class="icono izquierda fa fa-user"></i><input type="text" name="Nombres" class="usuario" placeholder="Nombres">
 			</div>
 
 			<div class="form-group">
-				<i class="icono izquierda fa fa-lock"></i><input type="password" name="password2" class="password_btn" placeholder="Repetir Contraseña">
+				<i class="icono izquierda fa fa-user"></i><input type="text" name="TipoDocumento" class="usuario" placeholder="Tipo de Documento">
+			</div>
+
+			<div class="form-group">
+				<i class="icono izquierda fa fa-user"></i><input type="text" name="NroDocumento" class="usuario" placeholder="N° Documento">
+			</div>
+
+			<div class="form-group">
+				<i class="icono izquierda fa fa-user"></i><input type="text" name="Id_rol" class="usuario" placeholder="Rol">
+			</div>
+
+			<div class="form-group">
+				<i class="icono izquierda fa fa-user"></i><input type="text" name="Eliminado" class="usuario" placeholder="Eliminado">
+			</div>
+
+			<div class="form-group">
+				<i class="icono izquierda fa fa-user"></i><input type="text" name="Usuario" class="usuario" placeholder="Usuario">
+			</div>
+
+			<div class="form-group">
+				<i class="icono izquierda fa fa-lock"></i><input type="password" name="Clave" class="password" placeholder="Contraseña">
+			</div>
+
+			<div class="form-group">
+				<i class="icono izquierda fa fa-lock"></i><input type="password" name="Clave2" class="password_btn" placeholder="Repetir Contraseña">
 				<i class="submit-btn fa fa-arrow-right" onclick="login.submit()"></i>
 			</div>
 
